@@ -5,6 +5,7 @@ import org.eclipse.egit.github.core.Milestone;
 import org.jenkinsci.plugins.pipeline.github.client.ExtendedMilestone;
 import org.jenkinsci.plugins.scriptsecurity.sandbox.whitelists.Whitelisted;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
@@ -16,6 +17,7 @@ import java.util.Objects;
  * @see Milestone
  */
 public class MilestoneGroovyObject extends GroovyObjectSupport implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private final String jobId;

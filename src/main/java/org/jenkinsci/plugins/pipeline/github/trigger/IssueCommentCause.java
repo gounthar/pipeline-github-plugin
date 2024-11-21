@@ -36,6 +36,6 @@ public class IssueCommentCause extends Cause {
 
     @Override
     public String getShortDescription() {
-        return String.format("%s commented: %s", userLogin, comment);
+        return "%s commented: %s".formatted(userLogin, comment);
     }
 }

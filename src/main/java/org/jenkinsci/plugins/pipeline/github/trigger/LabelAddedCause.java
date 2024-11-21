@@ -31,6 +31,6 @@ public class LabelAddedCause extends Cause {
 
     @Override
     public String getShortDescription() {
-        return String.format("%s added label %s", userLogin, labelAdded);
+        return "%s added label %s".formatted(userLogin, labelAdded);
     }
 }

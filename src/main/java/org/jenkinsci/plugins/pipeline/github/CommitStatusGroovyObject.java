@@ -4,6 +4,7 @@ import groovy.lang.GroovyObjectSupport;
 import org.eclipse.egit.github.core.CommitStatus;
 import org.jenkinsci.plugins.scriptsecurity.sandbox.whitelists.Whitelisted;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
@@ -15,6 +16,7 @@ import java.util.Objects;
  * @see CommitStatus
  */
 public class CommitStatusGroovyObject extends GroovyObjectSupport implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private final CommitStatus commitStatus;

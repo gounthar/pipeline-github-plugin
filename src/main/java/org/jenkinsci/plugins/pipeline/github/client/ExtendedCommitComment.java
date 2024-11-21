@@ -2,10 +2,13 @@ package org.jenkinsci.plugins.pipeline.github.client;
 
 import org.eclipse.egit.github.core.CommitComment;
 
+import java.io.Serial;
+
 /**
  * @author Aaron Whiteside
  */
 public class ExtendedCommitComment extends CommitComment {
+    @Serial
     private static final long serialVersionUID = 4834285683963788350L;
 
     private String pullRequestUrl;

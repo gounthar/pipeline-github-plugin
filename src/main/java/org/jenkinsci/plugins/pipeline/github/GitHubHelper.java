@@ -52,8 +52,7 @@ public class GitHubHelper {
 
     public static ExtendedGitHubClient getGitHubClient(@Nonnull final Job<?,?> job) {
         SCMSource scmSource = SCMSource.SourceByItem.findSource(job);
-        if (scmSource instanceof GitHubSCMSource) {
-            GitHubSCMSource gitHubSource = (GitHubSCMSource) scmSource;
+        if (scmSource instanceof GitHubSCMSource gitHubSource) {
 
             URI uri = URI.create(gitHubSource.getApiUri());
             ExtendedGitHubClient client = new ExtendedGitHubClient(uri.getHost(), uri.getPort(), uri.getScheme());
@@ -63,8 +62,7 @@ public class GitHubHelper {
                 StandardCredentials credentials = Connector.lookupScanCredentials(
                         job, gitHubSource.getApiUri(), gitHubSource.getCredentialsId(), gitHubSource.getRepoOwner());
 
-                if (credentials instanceof StandardUsernamePasswordCredentials) {
-                    StandardUsernamePasswordCredentials c = (StandardUsernamePasswordCredentials) credentials;
+                if (credentials instanceof StandardUsernamePasswordCredentials c) {
                     String userName = c.getUsername();
                     String password = c.getPassword().getPlainText();
                     client.setCredentials(userName, password);
@@ -77,8 +75,7 @@ public class GitHubHelper {
 
     public static RepositoryId getRepositoryId(@Nonnull final Job<?,?> job) {
         SCMSource src = SCMSource.SourceByItem.findSource(job);
-        if (src instanceof GitHubSCMSource) {
-            GitHubSCMSource source = (GitHubSCMSource) src;
+        if (src instanceof GitHubSCMSource source) {
             if (source.getCredentialsId() != null) {
                 return RepositoryId.create(source.getRepoOwner(), source.getRepository());
             }

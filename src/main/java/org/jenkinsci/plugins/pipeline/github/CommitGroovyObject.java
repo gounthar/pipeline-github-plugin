@@ -12,6 +12,7 @@ import org.jenkinsci.plugins.pipeline.github.client.ExtendedCommitService;
 import org.jenkinsci.plugins.scriptsecurity.sandbox.whitelists.Whitelisted;
 
 import java.io.IOException;
+import java.io.Serial;
 import java.io.Serializable;
 import java.io.UncheckedIOException;
 import java.util.Collection;
@@ -41,6 +42,7 @@ import static java.util.stream.Collectors.toList;
  */
 @SuppressFBWarnings("SE_BAD_FIELD")
 public class CommitGroovyObject extends GroovyObjectSupport implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private final String jobId;

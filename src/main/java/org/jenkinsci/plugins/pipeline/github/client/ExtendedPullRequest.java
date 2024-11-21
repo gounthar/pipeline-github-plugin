@@ -3,10 +3,13 @@ package org.jenkinsci.plugins.pipeline.github.client;
 import org.eclipse.egit.github.core.PullRequest;
 import org.eclipse.egit.github.core.User;
 
+import java.io.Serial;
+
 /**
  * @author Aaron Whiteside
  */
 public class ExtendedPullRequest extends PullRequest {
+    @Serial
     private static final long serialVersionUID = 4674327177035503955L;
 
     private User closedBy;

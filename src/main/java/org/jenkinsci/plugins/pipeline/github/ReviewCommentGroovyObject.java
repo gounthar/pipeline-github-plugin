@@ -8,6 +8,7 @@ import org.jenkinsci.plugins.pipeline.github.client.ExtendedCommitService;
 import org.jenkinsci.plugins.scriptsecurity.sandbox.whitelists.Whitelisted;
 
 import java.io.IOException;
+import java.io.Serial;
 import java.io.Serializable;
 import java.io.UncheckedIOException;
 import java.util.Date;
@@ -23,6 +24,7 @@ import java.util.Objects;
  */
 @SuppressFBWarnings("SE_BAD_FIELD")
 public class ReviewCommentGroovyObject extends GroovyObjectSupport implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private String jobId;

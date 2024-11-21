@@ -75,7 +75,7 @@ public class PullRequestReviewTrigger  extends Trigger<WorkflowJob> {
       final GitHubSCMSource scmSource = (GitHubSCMSource) SCMSource.SourceByItem.findSource(project);
       final PullRequestSCMHead scmHead = (PullRequestSCMHead) SCMHead.HeadByItem.findHead(project);
 
-      return String.format("%s/%s/%d",
+      return "%s/%s/%d".formatted(
               scmSource.getRepoOwner(),
               scmSource.getRepository(),
               scmHead.getNumber()).toLowerCase();

@@ -27,6 +27,7 @@ import org.jenkinsci.plugins.workflow.cps.persistence.PersistenceContext;
 
 import javax.annotation.Nonnull;
 import java.io.IOException;
+import java.io.Serial;
 import java.io.Serializable;
 import java.io.UncheckedIOException;
 import java.util.Collection;
@@ -53,6 +54,7 @@ import static java.util.stream.Collectors.toList;
 @SuppressFBWarnings("SE_BAD_FIELD")
 public class PullRequestGroovyObject extends GroovyObjectSupport implements Serializable {
 
+    @Serial
     private static final long serialVersionUID = 1L;
 
     private final String jobId;

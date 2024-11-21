@@ -47,8 +47,7 @@ public class GitHubEventSubscriber extends GHEventsSubscriber {
     @Override
     protected boolean isApplicable(@Nullable final Item project) {
         if (project != null) {
-            if (project instanceof SCMSourceOwner) {
-                SCMSourceOwner owner = (SCMSourceOwner) project;
+            if (project instanceof SCMSourceOwner owner) {
                 for (final SCMSource source : owner.getSCMSources()) {
                     if (source instanceof GitHubSCMSource) {
                         return true;
@@ -111,7 +110,7 @@ public class GitHubEventSubscriber extends GHEventsSubscriber {
                 return;
         }
         // create key for this comment's PR
-        final String key = String.format("%s/%s/%d",
+        final String key = "%s/%s/%d".formatted(
                 prEvent.getRepository().getOwnerName(),
                 prEvent.getRepository().getName(),
                 prEvent.getNumber());
@@ -197,7 +196,7 @@ public class GitHubEventSubscriber extends GHEventsSubscriber {
         }
 
         // create key for this comment's PR
-        final String key = String.format("%s/%s/%d",
+        final String key = "%s/%s/%d".formatted(
                 issueCommentEvent.getRepository().getOwnerName(),
                 issueCommentEvent.getRepository().getName(),
                 issueCommentEvent.getIssue().getNumber());
@@ -302,7 +301,7 @@ public class GitHubEventSubscriber extends GHEventsSubscriber {
                 return;
         }
 
-        final String key = String.format("%s/%s/%d",
+        final String key = "%s/%s/%d".formatted(
                 pullRequestReview.getRepository().getOwnerName(),
                 pullRequestReview.getRepository().getName(),
                 pullRequestReview.getPullRequest().getNumber());

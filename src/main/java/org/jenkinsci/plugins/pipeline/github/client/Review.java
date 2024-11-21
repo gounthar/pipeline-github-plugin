@@ -1,5 +1,6 @@
 package org.jenkinsci.plugins.pipeline.github.client;
 
+import java.io.Serial;
 import java.io.Serializable;
 import java.text.MessageFormat;
 import java.util.Collections;
@@ -10,6 +11,7 @@ import java.util.stream.Stream;
 import org.eclipse.egit.github.core.User;
 
 public class Review implements Serializable {
+    @Serial
     private static final long serialVersionUID = 1L;
 
     public static final String STATE_APPROVED = "APPROVED";

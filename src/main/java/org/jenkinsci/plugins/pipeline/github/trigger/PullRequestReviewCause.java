@@ -46,6 +46,6 @@ public class PullRequestReviewCause extends Cause {
 
   @Override
   public String getShortDescription() {
-      return String.format("%s reviewed: %s", userLogin, state);
+      return "%s reviewed: %s".formatted(userLogin, state);
   }
 }
