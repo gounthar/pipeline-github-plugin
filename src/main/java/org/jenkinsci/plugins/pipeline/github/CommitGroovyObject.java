@@ -39,7 +39,6 @@ import static java.util.stream.Collectors.toList;
  * @author Aaron Whiteside
  * @see RepositoryCommit
  */
-@SuppressFBWarnings("SE_BAD_FIELD")
 public class CommitGroovyObject extends GroovyObjectSupport implements Serializable {
     private static final long serialVersionUID = 1L;
 
