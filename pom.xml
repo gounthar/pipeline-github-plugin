@@ -16,6 +16,8 @@
     <properties>
         <revision>2.8</revision>
         <changelist>999999-SNAPSHOT</changelist>
+        <hpi.bundledArtifacts>org.eclipse.egit.github.core</hpi.bundledArtifacts>
+        <hpi.strictBundledArtifacts>true</hpi.strictBundledArtifacts>
         <!-- https://www.jenkins.io/doc/developer/plugin-development/choosing-jenkins-baseline/ -->
         <jenkins.baseline>2.479</jenkins.baseline>
         <jenkins.version>${jenkins.baseline}.3</jenkins.version>
