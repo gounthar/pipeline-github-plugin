@@ -21,7 +21,6 @@ import java.util.Objects;
  * @author Aaron Whiteside
  * @see Comment
  */
-@SuppressFBWarnings("SE_BAD_FIELD")
 public class IssueCommentGroovyObject extends GroovyObjectSupport implements Serializable {
     private static final long serialVersionUID = 1L;
 

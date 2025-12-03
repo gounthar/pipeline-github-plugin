@@ -50,7 +50,6 @@ import static java.util.stream.Collectors.toList;
  * @see ExtendedPullRequest
  */
 @PersistIn(PersistenceContext.NONE)
-@SuppressFBWarnings("SE_BAD_FIELD")
 public class PullRequestGroovyObject extends GroovyObjectSupport implements Serializable {
 
     private static final long serialVersionUID = 1L;
